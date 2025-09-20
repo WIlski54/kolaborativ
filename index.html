@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kollaboratives Lernsystem - Soziale Medien im Schulalltag</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .page {
+            background: white;
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #34495e;
+            background: linear-gradient(90deg, #ecf0f1, transparent);
+            padding: 10px 15px;
+            border-left: 4px solid #3498db;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+        
+        .info-box {
+            background: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .task-box {
+            background: #f8f9fa;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .step-box {
+            background: #f1f3f4;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        ul.checklist {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        ul.checklist li::before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        .timeline {
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #3498db;
+            border-radius: 50%;
+            position: absolute;
+            left: -26px;
+            top: 5px;
+        }
+        
+        .reflection-questions {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body { background: white; }
+            .page { box-shadow: none; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- TEIL 1: EINFÜHRUNG -->
+<div class="page">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <img src="GSM2.png" alt="GSM Logo" 
+             style="height: 160px; 
+                    margin-bottom: 20px;
+                    background: transparent;
+                    background-color: transparent;
+                    mix-blend-mode: darken;
+                    filter: brightness(1.1) contrast(1.2);
+                    -webkit-background-clip: padding-box;
+                    background-clip: padding-box;">
+        <h1 style="margin-top: 10px;">🚀 Willkommen im kollaborativen Lernsystem</h1>
+    </div>
+    <h2>Teil 1: Kennenlernen der Plattform</h2>
+    
+    <div class="info-box">
+        <strong>Lernziel:</strong> In diesem Arbeitsblatt lernt ihr unser digitales Kollaborationssystem kennen und wendet es praktisch am Beispiel des Themas "Soziale Medien im Schulalltag: Chancen und Risiken einer vernetzten Generation" an.
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="https://drwk7.pythonanywhere.com/login" target="_blank" 
+           style="display: inline-block; background: linear-gradient(45deg, #667eea, #764ba2); 
+                  color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; 
+                  font-size: 1.2em; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                  transition: transform 0.3s ease;">
+            🚀 Zur Lernplattform - Jetzt anmelden!
+        </a>
+        <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
+            Klickt hier, um euch anzumelden und loszulegen
+        </div>
+    </div>
+
+    <h3>Was ist unser Lernsystem?</h3>
+    <p>Unser Lernsystem ist eine Plattform, die speziell für die Zusammenarbeit in Lerngruppen entwickelt wurde. Es ermöglicht euch:</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <span class="icon">📝</span>
+            <h4>Gemeinsam schreiben</h4>
+            <p>Gleichzeitig an Texten arbeiten und Ideen entwickeln</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">🎨</span>
+            <h4>Visualisieren</h4>
+            <p>Mindmaps, Diagramme und Skizzen erstellen</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">🤖</span>
+            <h4>KI-Unterstützung</h4>
+            <p>Hilfe bei Recherche, Formulierungen und Strukturierung</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">📊</span>
+            <h4>Organisieren</h4>
+            <p>Dateien teilen, Fortschritte verfolgen, Ergebnisse exportieren</p>
+        </div>
+    </div>
+
+    <h3>Erste Schritte - Eure Lerngruppe</h3>
+    
+    <div class="step-box">
+        <strong>Schritt 1:</strong> Meldet euch an der Plattform an (falls noch nicht geschehen)
+    </div>
+    
+    <div class="step-box">
+        <strong>Schritt 2:</strong> Tretet der Gruppe bei, die euer Lehrer erstellt hat (Gruppen-Code wird bekanntgegeben)
+    </div>
+    
+    <div class="step-box">
+        <strong>Schritt 3:</strong> Verschafft euch einen Überblick über den Gruppenbereich
+    </div>
+
+    <div class="info-box">
+        <strong>💡 Tipp:</strong> Schaut euch zunächst 5 Minuten gemeinsam um. Wo findet ihr was? Welche Funktionen gibt es? Macht euch Notizen!
+    </div>
+
+    <h3>Die wichtigsten Funktionen im Überblick</h3>
+    
+    <table>
+        <tr>
+            <th>Funktion</th>
+            <th>Wofür nutzen?</th>
+            <th>Besonderheit</th>
+        </tr>
+        <tr>
+            <td><strong>Dokumente</strong></td>
+            <td>Gemeinsam Texte schreiben, bearbeiten</td>
+            <td>Live-Bearbeitung - ihr seht die Änderungen der anderen sofort</td>
+        </tr>
+        <tr>
+            <td><strong>Whiteboards</strong></td>
+            <td>Brainstorming, Mindmaps, Diagramme</td>
+            <td>KI kann Bilder generieren, Upload eigener Bilder möglich</td>
+        </tr>
+        <tr>
+            <td><strong>Dateien</strong></td>
+            <td>Bilder, PDFs, andere Materialien teilen</td>
+            <td>Alle haben Zugriff auf geteilte Materialien</td>
+        </tr>
+        <tr>
+            <td><strong>KI-Chat</strong></td>
+            <td>Fragen stellen, Hilfe bei Formulierungen</td>
+            <td>Kann Texte direkt bearbeiten und verbessern</td>
+        </tr>
+    </table>
+</div>
+
+<!-- TEIL 2: THEMA UND AUFGABE -->
+<div class="page">
+    <h1>📱 Soziale Medien im Schulalltag</h1>
+    <h2>Teil 2: Euer Projektthema</h2>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="net.png" alt="Soziale Medien im Klassenzimmer" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+        <div style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic;">
+            Soziale Medien prägen den Schulalltag - aber wie?
+        </div>
+    </div>
+
+    <h3>Das Thema: "Soziale Medien im Schulalltag - Chancen und Risiken einer vernetzten Generation"</h3>
+    
+    <div class="info-box">
+        <p>Soziale Medien sind aus dem Leben von Jugendlichen nicht mehr wegzudenken. Instagram, TikTok, Snapchat, Discord und andere Plattformen prägen den Alltag - auch in der Schule. Doch wie wirken sich diese digitalen Welten tatsächlich auf Lernen, soziale Beziehungen und die Persönlichkeitsentwicklung aus?</p>
+    </div>
+
+    <h3>Eure Aufgabe</h3>
+    
+    <div class="task-box">
+        <h4>🎯 Hauptauftrag:</h4>
+        <p>Erstellt gemeinsam eine <strong>fundierte Analyse</strong> zum Einfluss sozialer Medien auf den Schulalltag. Das Ergebnis soll eine <strong>multimediale Präsentation</strong> werden, die verschiedene Perspektiven beleuchtet und konkrete Handlungsempfehlungen enthält.</p>
+    </div>
+
+    <h3>Teilaufgaben - So geht ihr vor:</h3>
+    
+    <div class="timeline">
+        <div class="timeline-item">
+            <h4>Phase 1: Orientierung & Planung (1 Stunde)</h4>
+            <ul>
+                <li>Brainstorming: Was fällt euch zum Thema ein?</li>
+                <li>Erste Unterthemen sammeln</li>
+                <li>Arbeitsaufteilung besprechen</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <h4>Phase 2: Recherche & Materialsammlung (2 Stunden)</h4>
+            <ul>
+                <li>Wissenschaftliche Quellen finden</li>
+                <li>Statistiken und Studien recherchieren</li>
+                <li>Eigene Umfrage in der Schule durchführen</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <h4>Phase 3: Analyse & Bewertung (2 Stunden)</h4>
+            <ul>
+                <li>Positive und negative Aspekte herausarbeiten</li>
+                <li>Verschiedene Perspektiven einbeziehen</li>
+                <li>Eigene Erfahrungen reflektieren</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <h4>Phase 4: Lösungsansätze entwickeln (1 Stunde)</h4>
+            <ul>
+                <li>Konkrete Handlungsempfehlungen formulieren</li>
+                <li>Für Schüler, Lehrer und Eltern</li>
+                <li>Realistische Umsetzungsmöglichkeiten</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <h4>Phase 5: Präsentation erstellen (2 Stunden)</h4>
+            <ul>
+                <li>Ergebnisse strukturieren und visualisieren</li>
+                <li>Multimediale Elemente einbauen</li>
+                <li>Gemeinsame Präsentation vorbereiten</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Mögliche Unterthemen zur Vertiefung</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <span class="icon">🧠</span>
+            <h4>Lernen & Konzentration</h4>
+            <p>Ablenkung vs. neue Lernmöglichkeiten</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">👥</span>
+            <h4>Soziale Beziehungen</h4>
+            <p>Online-Freundschaften, Cybermobbing, FOMO</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">🎭</span>
+            <h4>Selbstbild & Identität</h4>
+            <p>Selbstdarstellung, Vergleiche, Selbstwert</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">⏰</span>
+            <h4>Zeitmanagement</h4>
+            <p>Zeitverschwendung vs. Effizienz</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">🔒</span>
+            <h4>Datenschutz & Privatsphäre</h4>
+            <p>Persönliche Daten, digitale Spuren</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">💰</span>
+            <h4>Kommerzialisierung</h4>
+            <p>Werbung, Influencer, Konsumverhalten</p>
+        </div>
+    </div>
+</div>
+
+<!-- TEIL 3: PRAKTISCHE ANLEITUNG -->
+<div class="page">
+    <h1>🛠️ So arbeitet ihr mit dem System</h1>
+    <h2>Teil 3: Praktische Anleitung</h2>
+
+    <h3>Erste Schritte in eurer Gruppe</h3>
+    
+    <div class="warning-box">
+        <strong>⚠️ Wichtig:</strong> Arbeitet von Anfang an strukturiert! Plant gemeinsam, wer wann was macht, und haltet euch an Absprachen.
+    </div>
+
+    <h3>🗺️ Schritt-für-Schritt: Euer erstes Brainstorming</h3>
+    
+    <div class="step-box">
+        <strong>1. Whiteboard erstellen</strong><br>
+        • Geht in euren Gruppenbereich<br>
+        • Klickt auf "Neues Whiteboard"<br>
+        • Titel: "Brainstorming - Soziale Medien"
+    </div>
+    
+    <div class="step-box">
+        <strong>2. Gemeinsam Ideen sammeln</strong><br>
+        • Jeder schreibt 5 Minuten eigene Gedanken auf (Text-Tool)<br>
+        • Nutzt verschiedene Farben für verschiedene Kategorien<br>
+        • Zeichnet Verbindungen zwischen verwandten Ideen
+    </div>
+    
+    <div class="step-box">
+        <strong>3. KI um Hilfe bitten</strong><br>
+        • Öffnet den KI-Chat im Whiteboard<br>
+        • Fragt z.B.: "Welche wichtigen Aspekte von sozialen Medien in der Schule könnten wir noch übersehen haben?"<br>
+        • Ergänzt neue Ideen auf dem Whiteboard
+    </div>
+
+    <div class="step-box">
+        <strong>4. Struktur entwickeln</strong><br>
+        • Gruppiert ähnliche Ideen<br>
+        • Erstellt Oberkategorien<br>
+        • Priorisiert: Was ist besonders wichtig?
+    </div>
+
+    <h3>📝 Gemeinsam schreiben - Euer erstes Dokument</h3>
+    
+    <div class="info-box">
+        <strong>Ziel:</strong> Erstellt ein gemeinsames Dokument "Projektplanung", in dem ihr eure Arbeitsaufteilung und Zeitplanung festhaltet.
+    </div>
+
+    <ul class="checklist">
+        <li>Neues Dokument erstellen: "Projektplanung - Soziale Medien"</li>
+        <li>Gemeinsam eine Gliederung entwickeln</li>
+        <li>Aufgaben auf Teammitglieder verteilen</li>
+        <li>Deadlines festlegen</li>
+        <li>Kontaktdaten und Verfügbarkeiten notieren</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>💡 Profi-Tipp:</strong> Nutzt die Live-Bearbeitung! Ihr könnt gleichzeitig schreiben und seht sofort, was die anderen machen. Bei Unklarheiten nutzt den Chat oder sprecht direkt miteinander.
+    </div>
+
+    <h3>🤖 Die KI richtig nutzen</h3>
+    
+    <table>
+        <tr>
+            <th>Situation</th>
+            <th>Gute KI-Frage</th>
+            <th>Weniger hilfreiche Frage</th>
+        </tr>
+        <tr>
+            <td>Recherche-Start</td>
+            <td>"Welche wissenschaftlichen Studien gibt es zum Einfluss von Instagram auf die Konzentration bei Jugendlichen?"</td>
+            <td>"Sind soziale Medien schlecht?"</td>
+        </tr>
+        <tr>
+            <td>Text verbessern</td>
+            <td>"!Verbessere diesen Absatz stilistisch und mache die Argumentation klarer"</td>
+            <td>"Schreib das für mich"</td>
+        </tr>
+        <tr>
+            <td>Strukturierung</td>
+            <td>"Hilf mir, eine logische Gliederung für das Thema Cybermobbing zu erstellen"</td>
+            <td>"Mach eine Gliederung"</td>
+        </tr>
+    </table>
+
+    <div class="info-box">
+        <strong>KI-Regel:</strong> Die KI ist euer Assistent, nicht euer Ersatz! Sie hilft beim Denken, Formulieren und Strukturieren - die Ideen und kritischen Gedanken müssen von euch kommen.
+    </div>
+</div>
+
+<!-- TEIL 4: ARBEITSAUFTRAG -->
+<div class="page">
+    <h1>📋 Konkrete Arbeitsaufträge</h1>
+    <h2>Teil 4: Jetzt seid ihr dran!</h2>
+
+    <h3>Arbeitsauftrag 1: Orientierung (15 Minuten)</h3>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="https://drwk7.pythonanywhere.com/login" target="_blank" 
+           style="display: inline-block; background: linear-gradient(45deg, #28a745, #20c997); 
+                  color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; 
+                  font-size: 1.1em; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+                  transition: transform 0.3s ease;">
+            💻 Zur Plattform wechseln
+        </a>
+    </div>
+
+    <div class="task-box">
+        <strong>Was sollt ihr tun:</strong>
+        <ol>
+            <li>Loggt euch alle in das System ein</li>
+            <li>Tretet der Gruppe bei (Code vom Lehrer)</li>
+            <li>Erkundet 10 Minuten gemeinsam die Oberfläche</li>
+            <li>Erstellt ein erstes Test-Dokument: "Unser Eindruck vom System"</li>
+            <li>Jeder schreibt 2-3 Sätze über den ersten Eindruck hinein</li>
+        </ol>
+    </div>
+
+    <h3>Arbeitsauftrag 2: Thema erschließen (30 Minuten)</h3>
+    
+    <div class="task-box">
+        <strong>Brainstorming-Session:</strong>
+        <ol>
+            <li>Erstellt ein Whiteboard "Unser Brainstorming"</li>
+            <li>Sammelt 15 Minuten Ideen zum Thema "Soziale Medien in der Schule"</li>
+            <li>Jeder denkt an eigene Erfahrungen: Was ist positiv? Was problematisch?</li>
+            <li>Nutzt die KI: Fragt sie nach weiteren wichtigen Aspekten</li>
+            <li>Ordnet eure Ideen in Kategorien (z.B. "Vorteile", "Nachteile", "Lösungsansätze")</li>
+        </ol>
+    </div>
+
+    <h3>Arbeitsauftrag 3: Projektplanung (30 Minuten)</h3>
+    
+    <div class="task-box">
+        <strong>Dokumentiert euer Vorgehen:</strong>
+        <ol>
+            <li>Erstellt das Dokument "Unser Projektplan"</li>
+            <li>Legt fest, welche Unterthemen ihr bearbeiten wollt</li>
+            <li>Teilt die Arbeit auf: Wer macht was bis wann?</li>
+            <li>Plant konkrete Arbeitsschritte für die nächsten Wochen</li>
+            <li>Notiert wichtige Fragen, die ihr klären müsst</li>
+        </ol>
+    </div>
+
+    <h3>Arbeitsauftrag 4: Erste Recherche (45 Minuten)</h3>
+    
+    <div class="task-box">
+        <strong>Materialsammlung beginnen:</strong>
+        <ol>
+            <li>Jeder übernimmt einen Recherche-Bereich</li>
+            <li>Erstellt gemeinsam das Dokument "Unsere Quellen und Materialien"</li>
+            <li>Sammelt erste seriöse Quellen (Studien, Artikel, Statistiken)</li>
+            <li>Nutzt die KI für Recherche-Tipps und Quellen-Vorschläge</li>
+            <li>Ladet relevante Dateien in den Gruppenbereich hoch</li>
+            <li>Notiert erste wichtige Erkenntnisse</li>
+        </ol>
+    </div>
+
+    <div class="warning-box">
+        <strong>🎯 Ziel der ersten Arbeitseinheit:</strong> Am Ende solltet ihr das System kennen, eine klare Vorstellung von eurem Projekt haben und wisssen, wie ihr die nächsten Schritte angeht.
+    </div>
+
+    <h3>Reflexionsfragen für zwischendurch</h3>
+    
+    <div class="reflection-questions">
+        <h4>💭 Macht euch Gedanken zu:</h4>
+        <ul>
+            <li>Wie unterscheidet sich die Arbeit mit diesem System von normaler Gruppenarbeit?</li>
+            <li>Welche Vorteile seht ihr beim gemeinsamen digitalen Arbeiten?</li>
+            <li>Was ist gewöhnungsbedürftig oder schwierig?</li>
+            <li>Wie hilft euch die KI konkret bei eurer Arbeit?</li>
+            <li>Wie organisiert ihr euch, damit alle gleichberechtigt mitarbeiten können?</li>
+        </ul>
+    </div>
+
+    <h3>Ausblick: Die nächsten Schritte</h3>
+    
+    <div class="info-box">
+        <strong>In den folgenden Wochen werdet ihr:</strong>
+        <ul>
+            <li>Eure Recherche vertiefen und strukturieren</li>
+            <li>Eine eigene Umfrage in der Schule durchführen</li>
+            <li>Verschiedene Perspektiven (Schüler, Lehrer, Eltern) einbeziehen</li>
+            <li>Konkrete Handlungsempfehlungen entwickeln</li>
+            <li>Eine multimediale Präsentation erstellen</li>
+            <li>Eure Ergebnisse der Klasse und eventuell der Schulgemeinschaft vorstellen</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <strong>📚 Bewertungskriterien:</strong><br>
+        Bewertet werden sowohl der Arbeitsprozess (Zusammenarbeit, Nutzung der Tools, Dokumentation) als auch das Endergebnis (Qualität der Analyse, Originalität der Lösungsansätze, Präsentation).
+    </div>
+</div>
+
+<!-- ANHANG -->
+<div class="page">
+    <h1>📖 Anhang</h1>
+    <h2>Hilfen und Tipps</h2>
+
+    <h3>🆘 Häufige Probleme und Lösungen</h3>
+    
+    <table>
+        <tr>
+            <th>Problem</th>
+            <th>Lösung</th>
+        </tr>
+        <tr>
+            <td>Jemand kann nicht beitreten</td>
+            <td>Gruppen-Code prüfen, eventuell neu eingeben. Bei weiterhin Problemen: Lehrer informieren</td>
+        </tr>
+        <tr>
+            <td>Änderungen werden nicht angezeigt</td>
+            <td>Seite neu laden (F5). Internet-Verbindung prüfen</td>
+        </tr>
+        <tr>
+            <td>KI antwortet nicht</td>
+            <td>Frage präziser formulieren. Bei technischen Problemen: kurz warten und erneut versuchen</td>
+        </tr>
+        <tr>
+            <td>Datei lässt sich nicht hochladen</td>
+            <td>Dateigröße prüfen (max. 10MB). Unterstützte Formate: jpg, png, pdf, docx</td>
+        </tr>
+    </table>
+
+    <h3>💡 Tipps für erfolgreiche Gruppenarbeit</h3>
+    
+    <ul class="checklist">
+        <li><strong>Kommunikation:</strong> Sprecht regelmäßig miteinander, auch außerhalb der Plattform</li>
+        <li><strong>Fairness:</strong> Achtet darauf, dass alle gleichberechtigt beitragen können</li>
+        <li><strong>Struktur:</strong> Haltet eure Dokumente und Dateien organisiert</li>
+        <li><strong>Backup:</strong> Exportiert wichtige Dokumente regelmäßig als PDF</li>
+        <li><strong>Zeitmanagement:</strong> Plant realistische Deadlines und haltet sie ein</li>
+        <li><strong>Qualität:</strong> Überprüft eure Quellen und Argumente kritisch</li>
+    </ul>
+
+    <h3>📚 Weiterführende Ressourcen</h3>
+    
+    <div class="info-box">
+        <strong>Für eure Recherche empfehlenswert:</strong>
+        <ul>
+            <li>Bundeszentrale für politische Bildung (bpb.de) - Artikel zu Digitalisierung</li>
+            <li>Klicksafe.de - Sicherheit im Internet</li>
+            <li>JIM-Studie (Jugend, Information, Medien) - aktuelle Zahlen zu Mediennutzung</li>
+            <li>Schau hin! (schau-hin.info) - Medienerziehung</li>
+            <li>Wissenschaftliche Datenbanken über eure Schulbibliothek</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <strong>🎯 Denkt daran:</strong> Das Ziel ist nicht nur ein gutes Projektergebnis, sondern auch zu lernen, wie digitale Zusammenarbeit funktioniert. Diese Fähigkeiten werdet ihr in Studium und Beruf immer wieder brauchen!
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; color: #7f8c8d;">
+        <p><em>Viel Erfolg bei eurem Projekt!</em></p>
+        <p><strong>Bei Fragen wendet euch jederzeit an euren Lehrer.</strong></p>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 2px solid #ecf0f1;">
+        <img src="LogoWK.png" alt="WK Logo" 
+             style="height: 80px; 
+                    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+                    transition: transform 0.3s ease, filter 0.3s ease;
+                    cursor: pointer;"
+             onmouseover="this.style.transform='scale(1.05)'; this.style.filter='drop-shadow(0 6px 12px rgba(0,0,0,0.3))'"
+             onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 4px 8px rgba(0,0,0,0.2))'">
+        <div style="margin-top: 15px; font-size: 0.85em; color: #95a5a6; font-weight: 300; letter-spacing: 1px;">
+            Erstellt mit dem kollaborativen Lernsystem
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
